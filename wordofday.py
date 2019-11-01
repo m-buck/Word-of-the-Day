@@ -20,7 +20,7 @@ def main():
     global def1
     global example
     #get random word from our wordlist
-    search = open('/home/pi/wordlist.txt').read().splitlines()
+    search = open('wordlist.txt').read().splitlines()
     word = random.choice(search)
     timestamp = time.strftime("%Y-%m-%d %H:%M")
     print timestamp
