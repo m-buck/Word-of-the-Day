@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Word of the Day</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link href="https://fonts.googleapis.com/css?family=Carter+One|Cinzel+Decorative|Montserrat:500|Open+Sans:600|Raleway:700" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        var header = $('body');
+
+        var backgrounds = new Array(
+            'url(file:///home/pi/web2/images/w1.jpg)'
+          , 'url(file:///home/pi/web2/images/w2.jpg)'
+          , 'url(file:///home/pi/web2/images/w3.jpg)'
+          , 'url(file:///home/pi/web2/images/w4.jpg)'
+          , 'url(file:///home/pi/web2/images/w5.jpg)'
+          , 'url(file:///home/pi/web2/images/w6.jpg)'
+          , 'url(file:///home/pi/web2/images/w7.jpg)'
+          , 'url(file:///home/pi/web2/images/w8.jpg)'
+        );
+
+        var current = 0;
+
+        function nextBackground() {
+            current++;
+            current = current % backgrounds.length;
+            header.css('background-image', backgrounds[current]);
+        }
+        setInterval(nextBackground, 300000);
+
+        header.css('background-image', backgrounds[0]);
+        });
+        </script>
+    </head>
+    <body class="is-loading"  scroll="no" style="overflow: hidden">
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Main -->
+                    <section id="main">
+                        <header>
+                            <center>                          
+                            <h1><p>Word of the Day</p></h1>
+                            <h2>assist</h2>
+                            <p>Definition&nbsp;&bull;&nbsp;to give aid or support to.</p>
+                            <p>Example&nbsp;&bull;&nbsp;May I assist you with your homework?</p> 
+                            </center>
+                        </header>
+                    </section> 
+                <!-- Footer -->
+                    <footer id="footer">
+                        <ul class="copyright">
+                            <li><!--&copy; 2019--></li>
+                        </ul>
+                    </footer>
+
+            </div>
+                    <!-- Scripts -->
+            <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+            <script>
+                if ('addEventListener' in window) {
+                    window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+                    document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+                }
+            </script>
+    </body>
+</html>
